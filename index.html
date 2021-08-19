@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title> For the Odin Project Taks</title>
+    </head>
+    <body>
+        <h1>Rock Paper Scissors</h1>
+        <p> This is a skeleton html page for practising JavaScript</p>
+        <script>
+            
+            let options = ['Rock','Paper','Scissors'];
+            function computerPlay(){
+
+                const results = options[Math.floor(3*Math.random())];
+                return results;
+            }
+
+            function playerChoice(choice){
+
+                choice = prompt("What is your selection:");
+                let choices = choice.toLowerCase();
+                if (choices == 'rock'|| choices == 'paper' || choices == 'scissors'){
+
+                    return choices;
+                   
+                }
+   
+                else {
+
+                    return ("You need to enter one of Rock, Paper or Scissors!");
+                }
+            }
+            
+            function gamePlay(playerSelection, computerSelection) {
+                playerSelection = playerChoice();
+                computerSelection = computerPlay();
+
+                if (playerSelection == computerSelection){
+                    return "It is a tie";
+
+                }else if(playerSelection == 'rock'){
+                    if (computerSelection == 'scissors'){
+                        return "You win! Rock blunts Scissors";
+                    }else if (computerSelection == "paper"){
+                        return "You Lose! Paper covers Rock";
+                    }
+
+                else if(playerSelection == 'paper'){
+                    if (computerSelection == 'rock'){
+                        return "You win! Paper covers Rock"
+                    }else if (computerSelection == 'scissors'){
+                        return "You lose! Scissors cuts Paper";
+                    }
+
+                else if(playerSelection == 'scissors'){
+                    if (computerSelection == 'rock'){
+                        return "You lose! Rock blunts Scissors"
+                    }else if (computerSelection == 'paper'){
+                        return "You win! Scissors cuts paper"
+                    }
+                }
+                }
+                }
+
+            }
+            console.log(gamePlay(playerSelection,computerSelection));
+
+
+        </script>
+    </body>
+</html>
