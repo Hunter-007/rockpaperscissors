@@ -1,3 +1,3 @@
 # rockpaperscissors
-This repo was created to host the files for the rock, paper, scissors game.
+This repo was created to host the files for the  revamped rock, paper, scissors game.
 
